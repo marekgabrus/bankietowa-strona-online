@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import NavBar from '@/components/NavBar';
+import Hero from '@/components/Hero';
+import AboutUs from '@/components/AboutUs';
+import Offer from '@/components/Offer';
+import Gallery from '@/components/Gallery';
+import PriceList from '@/components/PriceList';
+import Testimonials from '@/components/Testimonials';
+import News from '@/components/News';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
+import RevealOnScroll from '@/components/RevealOnScroll';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = 'Sala Bankietowa Patryk Smardzewski | Eleganckie przyjęcia';
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <NavBar />
+      <Hero />
+      <AboutUs />
+      <Offer />
+      <Gallery />
+      <PriceList />
+      <Testimonials />
+      <News />
+      <Contact />
+      <Footer />
+      <ScrollToTop />
+      <RevealOnScroll />
     </div>
   );
 };
