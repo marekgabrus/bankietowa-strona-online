@@ -107,7 +107,7 @@
   position: relative;
   height: 2px;
   width: 100px;
-  background-color: theme('colors.gold.DEFAULT');
+  background-color: #B8860B;
   margin: 1rem auto;
 }
 
@@ -119,7 +119,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: theme('colors.gold.DEFAULT');
+  background-color: #B8860B;
 }
 
 .section-divider::before {
@@ -130,14 +130,16 @@
   right: -2px;
 }
 
-.button-gold {
-  @apply bg-gold-DEFAULT text-white hover:bg-gold-dark transition-colors duration-300 px-6 py-3 rounded-md font-medium;
-}
+@layer components {
+  .button-gold {
+    @apply bg-gold text-white hover:bg-gold-dark transition-colors duration-300 px-6 py-3 rounded-md font-medium;
+  }
 
-.button-purple {
-  @apply bg-purple-DEFAULT text-white hover:bg-purple-dark transition-colors duration-300 px-6 py-3 rounded-md font-medium;
-}
+  .button-purple {
+    @apply bg-purple text-white hover:bg-purple-dark transition-colors duration-300 px-6 py-3 rounded-md font-medium;
+  }
 
-.button-outline {
-  @apply border-2 border-gold-DEFAULT text-gold-DEFAULT hover:bg-gold-DEFAULT hover:text-white transition-colors duration-300 px-6 py-[10px] rounded-md font-medium;
+  .button-outline {
+    @apply border-2 border-gold text-gold hover:bg-gold hover:text-white transition-colors duration-300 px-6 py-[10px] rounded-md font-medium;
+  }
 }
