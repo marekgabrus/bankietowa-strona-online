@@ -1,37 +1,38 @@
 
-import { Users, Music, Utensils, PartyPopper } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { PartyPopper, Music, Tv, Bike, Dumbbell, Coffee, BedDouble } from 'lucide-react';
+import salaImg from '@/assets/sala_stolowa2.png';
 
 const Offer = () => {
-  const eventTypes = [
-    { name: 'Wesela', icon: PartyPopper, color: 'bg-purple-light' },
-    { name: 'Komunie', icon: PartyPopper, color: 'bg-purple-DEFAULT' },
-    { name: 'Urodziny', icon: PartyPopper, color: 'bg-purple-dark' },
-    { name: 'Konferencje', icon: Users, color: 'bg-gold-light' },
-    { name: 'Studniówki', icon: Music, color: 'bg-gold-DEFAULT' },
-    { name: 'Chrzciny', icon: PartyPopper, color: 'bg-gold-dark' },
-  ];
-
-  const additionalServices = [
+  const offerBlocks = [
     {
-      title: 'Catering',
-      icon: Utensils,
-      description: 'Profesjonalny catering z bogatym menu dostosowanym do Twoich preferencji',
-    },
-    {
-      title: 'Dekoracje',
+      title: 'Imprezy okolicznościowe',
       icon: PartyPopper,
-      description: 'Eleganckie dekoracje sali dopasowane do charakteru uroczystości',
+      items: ['Małe wesela', 'Urodziny i imieniny', 'Chrzciny i komunie', 'Stypy', 'Spotkania towarzyskie'],
     },
     {
-      title: 'Obsługa kelnerska',
-      icon: Users,
-      description: 'Doświadczeni kelnerzy dbający o komfort Twoich gości',
-    },
-    {
-      title: 'Oprawa muzyczna',
+      title: 'Kultura i eventy',
       icon: Music,
-      description: 'Profesjonalny DJ lub zespół muzyczny na Twoją uroczystość',
+      items: ['Wernisaże i wystawy', 'Koncerty i imprezy zamknięte', 'Imprezy kulturowe i artystyczne'],
+    },
+    {
+      title: 'Sport i transmisje',
+      icon: Tv,
+      items: ['Transmisje sportowe na żywo', 'Mecze, sporty walki i inne wydarzenia'],
+    },
+    {
+      title: 'Zloty i wydarzenia tematyczne',
+      icon: Bike,
+      items: ['Zloty motocyklowe', 'Wystawy zwierząt, sztuki, kultury, muzyki, tatuażu', 'Eventy i aktywności artystyczne'],
+    },
+    {
+      title: 'Wielofunkcyjna sala',
+      icon: Dumbbell,
+      items: ['Treningi fitness', 'Próby muzyczne', 'Rehabilitacja', 'Wieczory taneczne i karaoke', 'Pokazy, turnieje, quizy', 'Gry i rozgrywki pokerowe'],
+    },
+    {
+      title: 'Ekskluzywna herbaciarnia',
+      icon: Coffee,
+      items: ['Herbaty ze wszystkich zakątków świata', 'Kameralna atmosfera i wyjątkowe smaki', 'Idealne miejsce na spokojne spotkanie'],
     },
   ];
 
@@ -39,88 +40,58 @@ const Offer = () => {
     <section id="oferta" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-purple-DEFAULT">Nasza Oferta</h2>
+          <h2 className="text-4xl font-bold text-purple">Nasza Oferta</h2>
           <div className="section-divider"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Kompleksowa organizacja przyjęć okolicznościowych dopasowana do Twoich potrzeb
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Galeria Król Pik to przestrzeń, która dopasowuje się do Twoich potrzeb – od kameralnych spotkań po duże eventy
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-6 reveal">
-            <h3 className="text-3xl font-semibold text-purple-DEFAULT">Sala Bankietowa</h3>
-            <p className="text-gray-700">
-              Nasza przestronna sala bankietowa to idealne miejsce na organizację różnego rodzaju uroczystości.
-              Elegancki wystrój, profesjonalne nagłośnienie i klimatyzacja sprawią, że Twoje przyjęcie będzie udane.
-            </p>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h4 className="text-xl font-semibold text-purple-DEFAULT mb-4">Specyfikacja sali</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Pojemność: do 200 osób</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Nowoczesny system nagłośnienia</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Klimatyzacja</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Elegancki wystrój</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Przestronny parkiet taneczny</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 bg-gold-DEFAULT rounded-full mr-2"></span>
-                  <span>Duży parking</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="pt-6">
-              <h4 className="text-xl font-semibold text-purple-DEFAULT mb-4">Rodzaje organizowanych imprez</h4>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {eventTypes.map((event, index) => (
-                  <div key={index} className="text-center">
-                    <div className={cn("w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2", event.color)}>
-                      <event.icon className="text-white" size={24} />
-                    </div>
-                    <h5 className="font-semibold">{event.name}</h5>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="reveal">
             <img 
-              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2798&auto=format&fit=crop" 
-              alt="Sala Bankietowa wnętrze" 
+              src={salaImg}
+              alt="Sala główna Galeria Król Pik" 
               className="rounded-lg shadow-xl w-full h-full object-cover"
             />
           </div>
+          <div className="space-y-4 reveal">
+            <h3 className="text-3xl font-semibold text-purple">Przestrzeń na każdą okazję</h3>
+            <p className="text-muted-foreground">
+              Nasza sala główna to wielofunkcyjna przestrzeń, którą łatwo zaadaptować zarówno na eleganckie przyjęcie, 
+              jak i na dynamiczne wydarzenie sportowe czy kulturalne. Klimatyzacja, nagłośnienie i wygodny parking 
+              zapewniają komfort każdemu gościowi.
+            </p>
+            <div className="bg-muted p-6 rounded-lg shadow-md flex items-start gap-4">
+              <BedDouble className="text-gold shrink-0 mt-1" size={28} />
+              <div>
+                <h4 className="text-xl font-semibold text-purple mb-1">Nocleg i wynajem na kilka dni</h4>
+                <p className="text-muted-foreground">
+                  Oferujemy możliwość wynajmu lokalu na kilka dni, wraz z noclegiem dla maksymalnie 10 osób. 
+                  Idealne rozwiązanie na wielodniowe eventy, zloty czy imprezy okolicznościowe.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-gray-50 p-8 rounded-lg shadow-lg reveal">
-          <h3 className="text-3xl font-semibold text-center text-purple-DEFAULT mb-8">Usługi dodatkowe</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-md shadow-md text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gold-DEFAULT rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="text-white" size={28} />
-                </div>
-                <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                <p className="text-gray-600">{service.description}</p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {offerBlocks.map((block, index) => (
+            <div key={index} className="bg-muted p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow reveal">
+              <div className="w-14 h-14 bg-gold rounded-full flex items-center justify-center mb-4">
+                <block.icon className="text-white" size={26} />
               </div>
-            ))}
-          </div>
+              <h4 className="text-xl font-semibold text-purple mb-3">{block.title}</h4>
+              <ul className="space-y-1.5">
+                {block.items.map((item, idx) => (
+                  <li key={idx} className="flex items-center text-muted-foreground">
+                    <span className="w-2 h-2 bg-gold rounded-full mr-2 shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

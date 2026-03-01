@@ -1,67 +1,68 @@
 
-import { Users, Star, MapPin } from 'lucide-react';
+import { Star, MapPin, Users } from 'lucide-react';
+import bFrontImg from '@/assets/B_front.png';
 
 const AboutUs = () => {
   return (
-    <section id="o-nas" className="py-20 bg-gray-50">
+    <section id="o-nas" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-purple-DEFAULT">O Nas</h2>
+          <h2 className="text-4xl font-bold text-purple">O Nas</h2>
           <div className="section-divider"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Odkryj wyjątkowe miejsce, w którym Twoje uroczystości nabiorą blasku i elegancji
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Galeria Król Pik to wielofunkcyjna przestrzeń w Miłoszycach – miejsce, gdzie kultura, rozrywka i spotkania łączą się w jednym.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="reveal">
             <img 
-              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2728&auto=format&fit=crop" 
-              alt="Sala Bankietowa" 
+              src={bFrontImg}
+              alt="Budynek Galeria Król Pik" 
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </div>
           <div className="space-y-6 reveal">
-            <h3 className="text-3xl font-semibold text-purple-DEFAULT">Nasza historia</h3>
-            <p className="text-gray-700">
-              Od ponad 10 lat z pasją organizujemy niezapomniane przyjęcia i uroczystości. 
-              Sala Bankietowa Patryk Smardzewski to miejsce, które łączy elegancję z przytulną atmosferą, 
-              tworząc idealne tło dla Twoich najważniejszych chwil.
+            <h3 className="text-3xl font-semibold text-purple">Nasza historia</h3>
+            <p className="text-muted-foreground">
+              Galeria Król Pik powstała z pasji do tworzenia przestrzeni, w której każdy znajdzie coś dla siebie. 
+              Od kameralnych wesel i urodzin, przez wernisaże i koncerty, po transmisje sportowe i zloty motocyklowe 
+              – nasza sala dopasowuje się do Twoich potrzeb.
             </p>
             
             <div className="pt-4">
-              <h4 className="text-xl font-semibold text-purple-DEFAULT mb-4">Właściciel</h4>
+              <h4 className="text-xl font-semibold text-purple mb-4">Właściciel</h4>
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-purple-light rounded-full flex items-center justify-center">
                   <span className="text-white text-2xl font-bold">PS</span>
                 </div>
                 <div>
                   <p className="font-semibold text-lg">Patryk Smardzewski</p>
-                  <p className="text-gray-600">Z zamiłowania do organizacji przyjęć i dbałości o najdrobniejsze szczegóły</p>
+                  <p className="text-muted-foreground">Twórca Galerii Król Pik – z zamiłowania do kultury, sportu i spotkań w dobrym towarzystwie</p>
                 </div>
               </div>
             </div>
 
             <div className="pt-6">
-              <h4 className="text-xl font-semibold text-purple-DEFAULT mb-4">Co nas wyróżnia</h4>
+              <h4 className="text-xl font-semibold text-purple mb-4">Co nas wyróżnia</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-md shadow-md text-center">
+                <div className="bg-background p-4 rounded-md shadow-md text-center">
                   <div className="flex justify-center mb-2">
-                    <Star className="text-gold-DEFAULT" size={28} />
+                    <Star className="text-gold" size={28} />
                   </div>
-                  <h5 className="font-semibold">Elegancki wystrój</h5>
+                  <h5 className="font-semibold">Wielofunkcyjność</h5>
                 </div>
-                <div className="bg-white p-4 rounded-md shadow-md text-center">
+                <div className="bg-background p-4 rounded-md shadow-md text-center">
                   <div className="flex justify-center mb-2">
-                    <MapPin className="text-gold-DEFAULT" size={28} />
+                    <MapPin className="text-gold" size={28} />
                   </div>
-                  <h5 className="font-semibold">Dogodna lokalizacja</h5>
+                  <h5 className="font-semibold">Wrocławska 50, Miłoszyce</h5>
                 </div>
-                <div className="bg-white p-4 rounded-md shadow-md text-center">
+                <div className="bg-background p-4 rounded-md shadow-md text-center">
                   <div className="flex justify-center mb-2">
-                    <Users className="text-gold-DEFAULT" size={28} />
+                    <Users className="text-gold" size={28} />
                   </div>
-                  <h5 className="font-semibold">Profesjonalna obsługa</h5>
+                  <h5 className="font-semibold">Kameralna atmosfera</h5>
                 </div>
               </div>
             </div>

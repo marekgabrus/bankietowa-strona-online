@@ -1,25 +1,22 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import bFrontImg from '@/assets/B_front.png';
+import salaImg from '@/assets/sala_stolowa2.png';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2798&auto=format&fit=crop',
-      title: 'Eleganckie przyjęcia w wyjątkowej atmosferze',
-      subtitle: 'Twoja uroczystość w naszej sali bankietowej - niezapomniane chwile czekają',
+      image: bFrontImg,
+      title: 'Galeria Król Pik – Twoje miejsce na wyjątkowe wydarzenia',
+      subtitle: 'Imprezy okolicznościowe, eventy kulturalne, transmisje sportowe i wiele więcej',
     },
     {
-      image: 'https://images.unsplash.com/photo-1519741347686-c1e331fcb4d0?q=80&w=2940&auto=format&fit=crop',
-      title: 'Wyjątkowe wesela i uroczystości rodzinne',
-      subtitle: 'Spełniamy Twoje marzenia o idealnym przyjęciu',
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2728&auto=format&fit=crop',
-      title: 'Profesjonalna obsługa i wyjątkowy wystrój',
-      subtitle: 'Twoje przyjęcie w eleganckiej oprawie',
+      image: salaImg,
+      title: 'Wielofunkcyjna przestrzeń w sercu Miłoszyc',
+      subtitle: 'Wesela, urodziny, wernisaże, koncerty, zloty i wieczory tematyczne',
     },
   ];
 
@@ -61,7 +58,6 @@ const Hero = () => {
         </div>
       ))}
 
-      {/* Slide indicators */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
         {slides.map((_, index) => (
           <button
@@ -69,9 +65,9 @@ const Hero = () => {
             onClick={() => setCurrentSlide(index)}
             className={cn(
               'w-3 h-3 rounded-full transition-all duration-300',
-              index === currentSlide ? 'bg-gold-DEFAULT w-6' : 'bg-white bg-opacity-50'
+              index === currentSlide ? 'bg-gold w-6' : 'bg-white bg-opacity-50'
             )}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Przejdź do slajdu ${index + 1}`}
           ></button>
         ))}
       </div>
