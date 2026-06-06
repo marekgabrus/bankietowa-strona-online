@@ -44,9 +44,8 @@ const PriceList = () => {
     },
   ];
 
-  const handleDownloadPDF = () => {
-    alert("Funkcja pobierania cennika w formacie PDF będzie dostępna wkrótce.");
-  };
+
+
 
   return (
     <section id="cennik" className="py-20">
