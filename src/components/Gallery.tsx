@@ -13,6 +13,11 @@ import pokoj1os2 from '@/assets/gallery/pokoj_1osobowy2.png';
 import pokoj2os1 from '@/assets/gallery/pokoj_2osobowy1.png';
 import pokoj2os2 from '@/assets/gallery/pokoj_2osobowy2.png';
 import pokojPodwojny from '@/assets/gallery/pokoj_podwojny.png';
+import scena1 from '@/assets/gallery/scena1.png';
+import wejscie from '@/assets/gallery/wejscie.png';
+import toaleta1 from '@/assets/gallery/toaleta1.png';
+import toaleta2 from '@/assets/gallery/toaleta_2.png';
+import toaleta3 from '@/assets/gallery/toaleta3.png';
 
 type GalleryImage = {
   src: string;
@@ -25,9 +30,11 @@ type GalleryImage = {
 const images: GalleryImage[] = [
   { src: salaParkiet, alt: 'Sala główna – parkiet taneczny', caption: 'Sala główna – parkiet', category: 'sala', featured: true },
   { src: salaStolowa, alt: 'Sala główna – układ stołowy', caption: 'Sala główna – układ stołowy', category: 'sala', featured: true },
+  { src: scena1, alt: 'Scena muzyczna – instrumenty i nagłośnienie', caption: 'Scena muzyczna', category: 'sala' },
   { src: bFront, alt: 'Budynek – widok od frontu', caption: 'Budynek – front', category: 'budynek' },
   { src: bFront2, alt: 'Budynek – elewacja frontowa', caption: 'Budynek – elewacja', category: 'budynek' },
   { src: bTaras, alt: 'Budynek – taras i ogród', caption: 'Taras i ogród', category: 'budynek', featured: true },
+  { src: wejscie, alt: 'Wejście – hol z klatką schodową', caption: 'Wejście i hol', category: 'budynek' },
   { src: kawiarnia, alt: 'Herbaciarnia – salonik', caption: 'Herbaciarnia – salonik', category: 'herbaciarnia' },
   { src: pokojPodwojny, alt: 'Pokój dwuosobowy – łóżko podwójne', caption: 'Pokój z łóżkiem podwójnym', category: 'nocleg', featured: true },
   { src: pokoj1os1, alt: 'Pokój jednoosobowy – widok pierwszy', caption: 'Pokój jednoosobowy', category: 'nocleg' },
@@ -35,14 +42,18 @@ const images: GalleryImage[] = [
   { src: pokoj2os1, alt: 'Pokój dwuosobowy – widok pierwszy', caption: 'Pokój dwuosobowy', category: 'nocleg' },
   { src: pokoj2os2, alt: 'Pokój dwuosobowy – widok drugi', caption: 'Pokój dwuosobowy', category: 'nocleg' },
   { src: kuchnia, alt: 'Kuchnia wspólna', caption: 'Kuchnia wspólna', category: 'inne' },
+  { src: toaleta1, alt: 'Łazienka z prysznicem – poddasze', caption: 'Łazienka z prysznicem', category: 'lazienki' },
+  { src: toaleta2, alt: 'Łazienka z wanną', caption: 'Łazienka z wanną', category: 'lazienki' },
+  { src: toaleta3, alt: 'Toaleta gościnna', caption: 'Toaleta gościnna', category: 'lazienki' },
 ];
 
 const categories = [
   { id: 'all', label: 'Wszystkie' },
-  { id: 'sala', label: 'Sala główna' },
-  { id: 'budynek', label: 'Budynek i otoczenie' },
+  { id: 'sala', label: 'Sala główna / przyjęcia' },
+  { id: 'budynek', label: 'Wejście i otoczenie' },
   { id: 'herbaciarnia', label: 'Herbaciarnia' },
-  { id: 'nocleg', label: 'Pokoje noclegowe' },
+  { id: 'nocleg', label: 'Nocleg (pokoje)' },
+  { id: 'lazienki', label: 'Łazienki' },
   { id: 'inne', label: 'Pozostałe strefy' },
 ];
 
