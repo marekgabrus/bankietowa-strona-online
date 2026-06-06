@@ -19,7 +19,7 @@ const Footer = () => {
               Wielofunkcyjna przestrzeń na imprezy, eventy, kulturę i rozrywkę w Miłoszycach.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/profile.php?id=61573254683510" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-purple flex items-center justify-center hover:bg-purple-light transition-colors">
                 <Facebook size={20} />
               </a>
@@ -46,11 +46,11 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone className="text-gold mr-2" size={16} />
-                <span className="text-gray-400">+48 123 456 789</span>
+                <span className="text-gray-400">+48 532 525 489</span>
               </li>
               <li className="flex items-center">
                 <Mail className="text-gold mr-2" size={16} />
-                <span className="text-gray-400">kontakt@galeriakrolpik.pl</span>
+                <span className="text-gray-400">galeriakrolpik@gmail.com</span>
               </li>
               <li className="text-gray-400 mt-2">
                 <p>Galeria Król Pik</p>

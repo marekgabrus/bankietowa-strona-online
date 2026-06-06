@@ -1,5 +1,5 @@
 
-import { Check, Download } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const PriceList = () => {
   const packages = [
@@ -44,9 +44,8 @@ const PriceList = () => {
     },
   ];
 
-  const handleDownloadPDF = () => {
-    alert("Funkcja pobierania cennika w formacie PDF będzie dostępna wkrótce.");
-  };
+
+
 
   return (
     <section id="cennik" className="py-20">
@@ -89,18 +88,6 @@ const PriceList = () => {
           ))}
         </div>
 
-        <div className="bg-muted p-8 rounded-lg shadow-md max-w-4xl mx-auto reveal">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-semibold text-purple mb-2">Pełny cennik do pobrania</h3>
-              <p className="text-muted-foreground">Pobierz szczegółowy cennik w formacie PDF</p>
-            </div>
-            <button onClick={handleDownloadPDF} className="flex items-center space-x-2 button-purple">
-              <Download size={20} />
-              <span>Pobierz Cennik PDF</span>
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

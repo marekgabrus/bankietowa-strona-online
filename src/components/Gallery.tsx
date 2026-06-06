@@ -32,7 +32,6 @@ const images: GalleryImage[] = [
   { src: salaStolowa, alt: 'Sala główna – układ stołowy', caption: 'Sala główna – układ stołowy', category: 'sala', featured: true },
   { src: scena1, alt: 'Scena muzyczna – instrumenty i nagłośnienie', caption: 'Scena muzyczna', category: 'sala' },
   { src: bFront, alt: 'Budynek – widok od frontu', caption: 'Budynek – front', category: 'budynek' },
-  { src: bFront2, alt: 'Budynek – elewacja frontowa', caption: 'Budynek – elewacja', category: 'budynek' },
   { src: bTaras, alt: 'Budynek – taras i ogród', caption: 'Taras i ogród', category: 'budynek', featured: true },
   { src: wejscie, alt: 'Wejście – hol z klatką schodową', caption: 'Wejście i hol', category: 'budynek' },
   { src: kawiarnia, alt: 'Herbaciarnia – salonik', caption: 'Herbaciarnia – salonik', category: 'herbaciarnia' },
@@ -53,8 +52,8 @@ const categories = [
   { id: 'budynek', label: 'Wejście i otoczenie' },
   { id: 'herbaciarnia', label: 'Herbaciarnia' },
   { id: 'nocleg', label: 'Nocleg (pokoje)' },
-  { id: 'lazienki', label: 'Łazienki' },
-  { id: 'inne', label: 'Pozostałe strefy' },
+  { id: 'lazienki', label: 'Zaplecze sanitarne' },
+  { id: 'inne', label: 'Wspólna kuchnia' },
 ];
 
 const Gallery = () => {
