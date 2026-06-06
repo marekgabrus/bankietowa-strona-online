@@ -1,5 +1,5 @@
 
-import { Check, Download } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const PriceList = () => {
   const packages = [
