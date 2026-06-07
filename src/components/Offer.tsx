@@ -75,6 +75,33 @@ const Offer = () => {
           </div>
         </div>
 
+        <div className="mb-16 reveal rounded-2xl overflow-hidden shadow-xl border border-gold/30 bg-gradient-to-br from-purple via-purple-dark to-gray-900 text-white">
+          <div className="p-8 md:p-10 grid md:grid-cols-[auto_1fr_auto] gap-6 items-center">
+            <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shrink-0">
+              <Coffee className="text-white" size={34} />
+            </div>
+            <div>
+              <p className="text-gold-light uppercase tracking-[0.2em] text-sm font-semibold mb-2">Nowość w ofercie</p>
+              <h3 className="text-3xl font-bold mb-3">Degustacje kawy Kopi Luwak</h3>
+              <p className="text-white/85 mb-4 max-w-3xl">
+                Rozszerzamy ofertę Galerii Król Pik o wyjątkowe spotkania kawowe. Proponujemy degustacje kawy Kopi Luwak,
+                prezentację różnych sposobów parzenia oraz możliwość zakupu kawy na miejscu.
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-2 text-white/90">
+                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-gold rounded-full"></span>Degustacje kawy Kopi Luwak</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-gold rounded-full"></span>Różne metody parzenia</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-gold rounded-full"></span>Możliwość zakupu kawy</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-gold rounded-full"></span>Dodatek do spotkań i eventów</li>
+              </ul>
+            </div>
+            <div className="md:text-right">
+              <a href="#kontakt" className="inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 font-semibold text-white hover:bg-gold-dark transition-colors whitespace-nowrap">
+                Zapytaj o degustację
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {offerBlocks.map((block, index) => (
             <div key={index} className="bg-muted p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow reveal">
